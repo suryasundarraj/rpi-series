@@ -26,7 +26,7 @@ if __name__ == '__main__':
 		try:
 			# Changing the Duty Cycle to rotate the motor 
 			servo.ChangeDutyCycle(7.5)
-			# Sleep for 1 Second 
+			# Sleep for 5 Seconds 
 			time.sleep(5)
 			servo.ChangeDutyCycle(12.5)
 			time.sleep(5)
