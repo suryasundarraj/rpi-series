@@ -19,19 +19,19 @@ if __name__ == '__main__':
 	# Disable the warning from the GPIO Library
 	GPIO.setwarnings(False)
 
-	# Starting the PWM and setting the initial position of the servo 
+	# Starting the PWM and setting the initial position of the servo with 50Hz frequency 
 	servo = GPIO.PWM(SERVO_PIN,50)
-	servo.start(7.5)
+	servo.start(0)
 	while True:
 		try:
 			# Changing the Duty Cycle to rotate the motor 
 			servo.ChangeDutyCycle(7.5)
 			# Sleep for 1 Second 
-			time.sleep(1)
+			time.sleep(5)
 			servo.ChangeDutyCycle(12.5)
-			time.sleep(1)
+			time.sleep(5)
 			servo.ChangeDutyCycle(2.5)
-			time.sleep(1)
+			time.sleep(5)
 
 		except KeyboardInterrupt:
 			servo.stop()
